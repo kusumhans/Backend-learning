@@ -1,0 +1,112 @@
+// Node.js v25.5.0 documentation
+
+// Node.js is a JavaScript runtime environment. it is used to servser side programming it means backend side it is not framework,library or language it is runtime environment.it is very popular runtime it is based on js it gives the power to run out side the browser it used to build command line
+// To check node.js is install in our window write node -v in our terminal 
+// node.js topics
+// 1. Node REPL:- read, evaluate, print, loop when we want to enter in our node repl then write node in our terminal then we enter in our node.js life
+// how node.js files create and open :-
+// now we taught about proces:- this provide the current information about node.js how we use it 
+// process.argv:- it is a proces property it give an array.
+// now we study aobut module.exports for file to file transtion. math.js file
+// first way to use module.exports
+
+// let sum = (a,b) => a+b; 
+// let multi = (a,b) => a*b;
+// const g = 9.8;
+// const PI = 3.14;
+
+// let obj = {
+//     sum: sum,
+//     multi: multi,
+//     g: g,
+//     PI: PI,
+
+// }
+
+// module.exports = obj;-------------------
+
+
+// // second way to use module.exports
+// let sum = (a,b) => a+b; 
+// let multi = (a,b) => a*b;
+// const g = 9.8;
+// const PI = 3.14;
+
+// module.exports = {
+//     sum: sum,
+//     multi: multi,
+//     g: g,
+//     PI: PI,
+
+// }
+// // third way to use module.exports
+// module.exports.sum = (a,b) => a+b; 
+// module.exports.multi = (a,b) => a*b;
+// module.exports.g = 9.8;
+// module.exports.PI = 3.14;
+// .script.js file
+// first way to use module.exports
+// const math = require("./Math")
+// console.log(math.sum(4,5));
+// console.log(math.multi(4,5));
+
+// second way to use module.exports
+// const math = require("./Math")------------------------------
+// const math = require("./Math")
+
+// console.log(math.sum(3,5));
+// console.log(math.g);
+// console.log(math.PI);
+// console.log(math.multi(5,2));
+// / now we study aobut module.exports for directory to directory 
+// module.exports = {
+//     name: "apple",
+//     color: "red",
+// }
+// module.exports = {
+//     name: "banana",
+//     color: "yellow",
+// }
+// module.exports = {
+//     name: "mango",
+//     color: "yellow",
+// }
+
+// const apple = require("./apple")
+// const mango = require("./mango")
+// const banana = require("./banana")
+
+// let fruits = [apple, mango, banana]
+
+// module.exports = fruits;
+// let Info = require("./fruits")
+// console.log(Info)
+// console.log(Info[2].color);
+
+// node .\script.js for terminal
+/* what is NPM:- NPM is a (node package manager) express.js or react.js they both are package or library most of the developr are used already written code thata are use by  by npm it is a command line tool
+1. installing npm :- when we use code which is written by other developer then install npm first*/
+
+
+
+
+// let x=10;
+// for (let i = 0; i < x; i++) {
+//    console.log("this is my result", i)
+    
+// }
+// console.log('this is end of the code')// js file run with the help of node like this ndoe then file name
+// example
+// PS C:\project\BackendNode-js> node .\nodejs-theory
+// this is my result 0
+// this is my result 1
+// this is my result 2
+// this is my result 3
+// this is my result 4
+// this is my result 5
+// this is my result 6
+// this is my result 7
+// this is my result 8
+// this is my result 9
+// this is end of the code
+// PS C:\project\BackendNode-
