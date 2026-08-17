@@ -28,6 +28,7 @@ const AllChats = [
         created_at: new Date(),
     },
 ];
+// console.log(AllChats);
 Chat.insertMany(AllChats);
 
 // init.js is a inisilization file to insert sample data it is run one time 
