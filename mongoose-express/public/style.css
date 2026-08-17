@@ -86,6 +86,31 @@ hr {
 .new-chat-btn:active {
     transform: translateY(0);
 }
+.chat-time {
+    max-width: 600px;
+    margin: -5px auto 20px;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+}
+
+.chat-time p {
+    margin: 0;
+}
+
+.chat-time .time {
+    color: #075e54;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.chat-time .date {
+    color: #667781;
+    font-size: 12px;
+}
 /* Form Heading */
 h2 {
     text-align: center;

@@ -18,6 +18,15 @@
     <div class="to">
         <p>recevied to: <%= chat.to %></p>
     </div>
+    <div class="chat-time">
+        <p class="time">
+            <%= chat.created_at.toString().split(" ")[4] %>
+        </p>
+    
+        <p class="date">
+            <%= chat.created_at.toString().split(" ").splice(0, 4).join(" ") %>
+        </p>
+    </div>
     <hr>
     <% } %>
     <form method="get" action="/chats/new">
