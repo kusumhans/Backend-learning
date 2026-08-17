@@ -63,3 +63,111 @@ hr {
     border-top: 1px solid #d5d5d5;
     margin: 25px auto;
 }
+.new-chat-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background: #075e54;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.new-chat-btn:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.new-chat-btn:active {
+    transform: translateY(0);
+}
+/* Form Heading */
+h2 {
+    text-align: center;
+    color: #075e54;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* Form */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Inputs */
+input,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input focus */
+input:focus,
+textarea:focus {
+    border-color: #25d366;
+    box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.15);
+}
+
+/* Textarea */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #075e54;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #128c7e;
+    transform: translateY(-1px);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
