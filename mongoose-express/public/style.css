@@ -1,3 +1,11 @@
+/* =========================
+   Global
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #efeae2;
@@ -10,6 +18,11 @@ h1 {
     color: #075e54;
     margin-bottom: 30px;
 }
+
+
+/* =========================
+   Chat
+========================= */
 
 .chat {
     max-width: 600px;
@@ -31,10 +44,19 @@ h1 {
     font-weight: bold;
 }
 
+
+/* =========================
+   Message
+========================= */
+
 .msg {
     max-width: 600px;
     margin: -10px auto 0;
     padding: 12px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
 .msg p {
@@ -44,7 +66,54 @@ h1 {
     border-radius: 10px 10px 2px 10px;
     color: #222;
     font-size: 16px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin: 0;
 }
+
+/* =========================
+   Edit Button
+========================= */
+
+.chat-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.chat-actions form {
+    margin: 0;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================
+   Receiver
+========================= */
 
 .to {
     max-width: 600px;
@@ -57,35 +126,11 @@ h1 {
     font-size: 13px;
 }
 
-hr {
-    max-width: 600px;
-    border: none;
-    border-top: 1px solid #d5d5d5;
-    margin: 25px auto;
-}
-.new-chat-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 24px;
-    background: #075e54;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
-.new-chat-btn:hover {
-    background: #128c7e;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-}
+/* =========================
+   Chat Time
+========================= */
 
-.new-chat-btn:active {
-    transform: translateY(0);
-}
 .chat-time {
     max-width: 600px;
     margin: -5px auto 20px;
@@ -111,7 +156,54 @@ hr {
     color: #667781;
     font-size: 12px;
 }
-/* Form Heading */
+
+
+/* =========================
+   Divider
+========================= */
+
+hr {
+    max-width: 600px;
+    border: none;
+    border-top: 1px solid #d5d5d5;
+    margin: 25px auto;
+}
+
+
+/* =========================
+   New Chat Button
+========================= */
+
+.new-chat-btn {
+    display: block;
+    width: auto;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background: #075e54;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.new-chat-btn:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.new-chat-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   Form Heading
+========================= */
+
 h2 {
     text-align: center;
     color: #075e54;
@@ -119,8 +211,12 @@ h2 {
     font-size: 28px;
 }
 
-/* Form */
-form {
+
+/* =========================
+   New Chat Form
+========================= */
+
+form[action="/chats"] {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
@@ -130,7 +226,11 @@ form {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Inputs */
+
+/* =========================
+   Inputs
+========================= */
+
 input,
 textarea {
     width: 100%;
@@ -144,27 +244,38 @@ textarea {
     transition: 0.3s;
 }
 
-/* Input focus */
 input:focus,
 textarea:focus {
     border-color: #25d366;
     box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.15);
 }
 
-/* Textarea */
+
+/* =========================
+   Textarea
+========================= */
+
 textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-/* Placeholder */
+
+/* =========================
+   Placeholder
+========================= */
+
 input::placeholder,
 textarea::placeholder {
     color: #888;
 }
 
-/* Button */
-button {
+
+/* =========================
+   Create Chat Button
+========================= */
+
+form[action="/chats"] button {
     width: 100%;
     padding: 13px;
     border: none;
@@ -177,22 +288,64 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+form[action="/chats"] button:hover {
     background: #128c7e;
     transform: translateY(-1px);
 }
 
-/* Mobile */
+
+/* =========================
+   Mobile
+========================= */
+
 @media (max-width: 600px) {
+
     body {
         padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 20px;
     }
 
     h2 {
         font-size: 23px;
     }
 
-    form {
+    form[action="/chats"] {
         padding: 20px;
+    }
+
+    .chat {
+        padding: 15px;
+    }
+
+    .msg {
+        padding: 12px;
+    }
+
+    .msg p {
+        max-width: 75%;
+        font-size: 14px;
+    }
+
+    .msg form {
+        right: 10px;
+        top: 12px;
+    }
+
+    .edit-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .chat-time {
+        padding: 8px 10px;
+    }
+
+    .new-chat-btn {
+        width: 100%;
+        max-width: 250px;
     }
 }
