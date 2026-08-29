@@ -39,9 +39,15 @@ const addCustomer = async() => {
     customer1.order.push(order2);
 
     let result = await customer1.save();
-    console.log(result);
+    console.log(result[0]);
 }
 addCustomer();
+
+const findCustomer = async() => {
+  let res = await Customer.findOne({name: "kusum"}).populate("order")//to extand the order details.
+  console.log(res)
+}
+findCustomer();
 
 // const addOrder = async() => {
 //     let res = await Order.insertMany([
